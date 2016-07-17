@@ -1,0 +1,35 @@
+{% extends 'index.njk' %}
+
+{% block main_script %}
+{% endblock main_script %}
+
+{% block content %}
+    <h2>Compost it!</h2>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+	<div>
+		<img id="garbage" src="static/21066_2_1200px.jpg" width="300px" height="300px">
+	</div>
+	<img id="coffeeFilters" src="static/compost-type-images/coffee-filters-grounds-teabags.png"
+		 draggable="true" ondragstart="drag(event)">
+	<img id="dairyProducts" src="static/compost-type-images/dairy-products.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="eggShells" src="static/compost-type-images/eggs-and-shells.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="fishShellfish" src="static/compost-type-images/fish-and-shellfish.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="foodSoiled" src="static/compost-type-images/food-soiled-paper-cardboard.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="fruitVeg" src="static/compost-type-images/fruit-and-veggies.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="grainPasta" src="static/compost-type-images/grain-and-pasta.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="meatBones" src="static/compost-type-images/meat-and-bones.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="plateScrapings" src="static/compost-type-images/plate-scrapings.png" draggable="true"
+		 ondragstart="drag(event)">
+	<img id="yardWaste" src="static/compost-type-images/yard-waste.png" draggable="true"
+		 ondragstart="drag(event)">
+	<script src="static/scripts/howto.js"></script>
+{% endblock %}

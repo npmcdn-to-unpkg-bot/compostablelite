@@ -96,6 +96,17 @@ app.get('/update-check', function(req, res) {
     res.end(JSON.stringify({'updated': updated}));
 });
 
+app.get('/howto', function(req,res) {
+    req.on('error', function(err) {
+        res.end("error" + err.stack);
+    });
+
+    var resp = nunjucks.render('howto.njk');
+    res.set('Content-Type', 'text/html');
+    res.end(resp);
+
+});
+
 app.post('/iot/buzz', function(req, res) {
     if (users[0].packages[1].readyDate === null) {
         users[0].packages[1].readyDate = 'something';

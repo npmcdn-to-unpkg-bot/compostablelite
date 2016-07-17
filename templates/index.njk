@@ -12,7 +12,7 @@
         {% block styles %}
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 			<link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
-            <link rel="stylesheet" href="static/styles/main.css">
+				<link rel="stylesheet" href="static/styles/main.css">
         {% endblock styles %}
 
         {% block scripts %}
@@ -20,7 +20,9 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+		{% block main_script %}
             <script src="static/scripts/main.js"></script>
+		{% endblock main_script %}
         {% endblock scripts %}
 
         <title>CompostableLite</title>
@@ -29,17 +31,22 @@
 	<body>
 		<div class="container">
 
+			{% block content %}
 			<main id="app">
+				<div class="jumbotron text-center">
+					<h1>Compostable</h1>
+				</div>
 				<div class="row">
 					<div id="leaflet-container"></div>
                 </div>
 				<div class="row">
-					<p class="lead">
+					<p class="text-center lead">
 						In the super pre-alpha release, you can see that the act of filling up your bin with compost
 						will trigger an alert to a nearby driver.  Hopefully, he picks up your stuff.
 					</p>
 				</div>
 			</main>
+			{% endblock content %}
 		</div>
 
 	</body>
