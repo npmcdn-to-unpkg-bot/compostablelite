@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        {% block meta %}
+            <meta http-equiv="x-ua-compatible" content="IE=Edge">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endblock meta %}
+
+        {% block styles %}
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+			<link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+            <link rel="stylesheet" href="static/styles/main.css">
+        {% endblock styles %}
+
+        {% block scripts %}
+			<script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+            <script src="static/scripts/main.js"></script>
+        {% endblock scripts %}
+
+        <title>CompostableLite</title>
+    </head>
+
+	<body>
+		<div class="container">
+
+			<main id="app">
+				<div class="row">
+					<div id="leaflet-container"></div>
+                </div>
+				<div class="row">
+					<p class="lead">
+						In the super pre-alpha release, you can see that the act of filling up your bin with compost
+						will trigger an alert to a nearby driver.  Hopefully, he picks up your stuff.
+					</p>
+				</div>
+			</main>
+		</div>
+
+	</body>
+
+</html>
