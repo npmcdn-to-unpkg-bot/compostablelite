@@ -4,7 +4,7 @@
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
+$("#coffeeFilters").draggable();
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
